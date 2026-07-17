@@ -1,0 +1,18 @@
+.topAddBar{
+    display: flex;
+    background-color:  #5A0C3D;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+    
+
+
+
+}
+
+.x-btn{
+    cursor: pointer;
+}
