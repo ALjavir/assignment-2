@@ -34,7 +34,7 @@
 
 /* 3. Apply to the items inside the scroll view */
 .action-item-bottomNav {
-  flex-shrink: 0; /* CRITICAL: Prevents the buttons from shrinking to fit the screen width */
+  flex-shrink: 0; 
 }
 
 
