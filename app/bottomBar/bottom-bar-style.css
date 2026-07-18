@@ -1,136 +1,138 @@
 .bottomBar-container {
-    display: flex;
-    flex-direction: row;
-    padding: 12px 64px;
-    gap: 24px;
-    align-items: center;
+  display: flex;
+ 
+
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+ 
+  margin: 0 auto;
+  padding: 12px 64px;
 }
 
 .sec-1 {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  flex-shrink: 0;
 }
 
 .sec-3 {
   display: flex;
-  flex-direction: row; /* Keeps items in a line */
-  gap: 24px;           /* Space between items */
-  
-  /* 1. Enable horizontal scrolling */
-  overflow-x: auto;    
+  flex-direction: row;
+  gap: 14px;
+
+  overflow-x: auto;
   width: 100%;
-  
-  /* 2. Optional: Hide the ugly default scrollbar for a clean touch-swipe look */
-  scrollbar-width: none;            /* Firefox */
-  -ms-overflow-style: none;         /* IE and Edge */
+  scrollbar-width: none;
 }
 
-/* Hide scrollbar for Chrome, Safari, and Opera */
 .sec-3::-webkit-scrollbar {
   display: none;
 }
 
-/* 3. Apply to the items inside the scroll view */
 .action-item-bottomNav {
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 
 
 
 .action-item-bottomNav {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    height: 50px;
-    align-items: center;
-    border: 0.5px solid #44444418;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 50px;
+  align-items: center;
+  border: 0.5px solid #44444418;
 
   padding: 8px 16px;
-    border-width: 0.5px;
-    border-radius: 999px;
+  border-width: 0.5px;
+  border-radius: 999px;
 
 }
 
 .category-dropdown-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-color: #F5F5F5;
-    border-radius: 999px;
-    padding: 16px 20px 16px 20px;
-    min-width: 250px;
-    height: 50px;
-    border: 1px solid #EAEAEA;
-    flex-direction: row;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #F5F5F5;
+  border-radius: 999px;
+  padding: 16px 20px 16px 20px;
+  min-width: 250px;
+  height: 50px;
+  border: 1px solid #EAEAEA;
+  flex-direction: row;
 }
 
 .category-dropdown-wrapper select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    border: none;
-    outline: none;
-    width: 100%;
-    font-family: 'Outfit', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #000000;
-    cursor: pointer;
-    padding-right: 44px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  padding-right: 44px;
 }
 
 /* Restores basic visibility rules for list options across default OS wrappers */
 .category-dropdown-wrapper select option {
-    padding: 10px;
-    border-color: blue;
-    background-color: #FFFFFF;
+  padding: 10px;
+  border-color: blue;
+  background-color: #FFFFFF;
 
 }
 
 
 
 .select-arrow-btn {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #FFFFFF;
-    /* White circular background container */
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.04);
-
-    /* IMPORTANT: Allows click events to pass straight through the circle element */
-    /* and tap directly into the select field beneath it */
-    pointer-events: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.04);
+  pointer-events: none;
 }
 
 .search-bar-container {
   display: flex;
   align-items: center;
-  background-color: #f4f4f4; /* Light grey background */
-  border-radius: 999px;      /* Pill shape */
-  padding: 4px;              /* Space inside the pill */
+  background-color: #f4f4f4;
+  /* Light grey background */
+  border-radius: 999px;
+  /* Pill shape */
+  padding: 4px;
+  /* Space inside the pill */
   width: 100%;
-  max-width: 400px;          /* Adjust based on your design */
+
+
   border: 1px solid #e0e0e0;
 }
 
 .search-input {
-  flex-grow: 1;              /* Takes up all available space */
+  flex-grow: 1;
+  /* Takes up all available space */
   border: none;
   background: transparent;
   padding: 10px 16px;
   font-size: 16px;
-  outline: none;             /* Removes the blue browser outline */
+  outline: none;
+  /* Removes the blue browser outline */
 }
 
-
+.search-btn {
+  padding-right: 8px;
+}

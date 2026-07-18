@@ -1,0 +1,159 @@
+/* ==========================================
+   CATEGORY SECTION GENERAL LAYOUT
+   ========================================== */
+#category-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  box-sizing: border-box;
+
+}
+
+/* --- Section Header Layout --- */
+.category-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.category-header-subTitle {
+    font-size: 18px;
+    font-weight: 400;
+
+    text-transform: capitalize;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.category-header-title {
+  font-size: 48px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   GRID CARD CONTAINER
+   ========================================== */
+.category-card {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* ==========================================
+   INDIVIDUAL CARD ELEMENT (BUTTON)
+   ========================================== */
+.category-action-item {
+
+  background: none;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  
+  /* 2. Setup Relative Position Context */
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4.2; /* Replicates premium UI card height ratios */
+  border-radius: 16px;
+  overflow: hidden;
+  
+  /* 3. Force alignment flow stack to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+
+
+.category-action-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45%;               /* Fades up through the bottom 45% of the card */
+  /* Smooth black fade from 85% opacity at the absolute bottom to total transparency */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;                /* Sits perfectly between the image and the text */
+  pointer-events: none;      /* Click-through safe so it doesn't block the button */
+}
+
+/* --- Backing Image --- */
+.category-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Sits behind text */
+  transition: transform 0.4s ease-in-out;
+}
+
+
+.category-action-item:hover .category-card-image {
+  transform: scale(1.06); /* 1.06 is a sweet spot; 1.1 might clip too much of the photo edges */
+}
+
+/* --- Dark Gradient Fade (Ensures white text readability) --- */
+
+/* --- Card Typography Details --- */
+.category-card-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  z-index: 3; /* Elevated over the gradient background */
+  position: relative;
+}
+
+/* Handles both the structural div wrapper and inner paragraph tag safely */
+.category-card-action {
+  z-index: 3;
+  position: relative;
+}
+
+.category-card-action {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.action-item-bottomNav:hover p.category-card-action::after {
+  transform: translateX(4px); /* Interactive bounce effect on hover */
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN SYSTEM MEDIA QUERIES
+   ========================================== */
+@media (max-width: 1024px) {
+  .category-card {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    gap: 16px;
+  }
+  .category-header-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .category-card {
+    grid-template-columns: 1fr; /* Stacked vertical view on small devices */
+  }
+  #category-section {
+    padding: 40px 16px;
+  }
+}

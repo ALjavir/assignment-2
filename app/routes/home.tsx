@@ -4,6 +4,7 @@ import TopAddBar from "~/topAddBar/top-add-bar";
 import HeroSection from "~/page/home/heroSection/hero-section";
 import Footer from "~/footer/footer";
 import BottomBar from "~/bottomBar/bottom-bar";
+import Category from "~/page/home/categorySection/category-section";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -19,7 +20,8 @@ export default function Home() {
       <NavBar />
       <BottomBar/>
       <main className="main-section">
-       <HeroSection/>
+        <HeroSection />
+        <Category/>
       </main>
       <Footer/>
       
