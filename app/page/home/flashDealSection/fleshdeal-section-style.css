@@ -1,0 +1,197 @@
+/* ==========================================
+   THE MAIN BANNER CONTAINER
+   ========================================== */
+
+   .flashDeal-section{
+   display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+   }
+.flashDeal-section-card {
+    position: relative;
+    width: 100%;
+    height: 595px;
+    /* Carves out the structural height context */
+    overflow: hidden;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50%;
+    align-content: center;
+    /* Vertically centers the text stack block */
+    justify-items: center;
+    /* Dead-centers every individual item inside its column cell */
+}
+
+/* --- 1. The Backing Wallpaper Graphic --- */
+.fleshDeal-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.flashDeal-section-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(90, 12, 61, 0) 0%, #5A0C3D 100%);
+
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* --- 2. The Complex Title SVG --- */
+.fleshDealTitle-img {
+    grid-column: 1;
+    /* Anchors inside the left layout zone */
+    z-index: 3;
+    /* Elevates over the background graphic */
+    width: 100%;
+    max-width: 520px;
+    /* Prevents the title vector from stretching too big */
+    height: auto;
+    margin-bottom: 20px;
+    /* Spacing pushing down against your crazy timer */
+}
+
+/* --- 3. 🚨 YOUR CRAZY TIMER TARGET PLACEHOLDER 🚨 --- */
+/* Whatever layout class name you attach to your dynamic countdown row container, 
+   just give it these two tracking rules to join the structural grid flow perfectly: */
+.flashDeal-timer-container-placeholder {
+    grid-column: 1;
+    z-index: 3;
+    margin-bottom: 24px;
+}
+
+/* --- 4. The Percentage Callout Text --- */
+.flashDeal-off-per {
+    grid-column: 1;
+    z-index: 3;
+    font-size: 22px;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+/* The neon highlight accent style */
+.flashDeal-per-num {
+    color: #E6F833;
+    /* Striking yellow/lime visual match */
+    font-weight: 700;
+}
+
+/* --- 5. The Campaign Subtext Message --- */
+.flashDeal-mess {
+    grid-column: 1;
+    z-index: 3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    max-width: 320px;
+    /* Replicates the exact width constraint in Figma */
+    margin: 0;
+}
+
+
+/* ==========================================
+   DYNAMIC COUNTDOWN TIMER
+   ========================================== */
+
+/* The main horizontal row container */
+.flashDeal-timer-container {
+  grid-column: 1;             /* Locks the timer to the left column zone */
+  z-index: 3;                 /* Floats safely above the background graphic */
+  display: flex;
+  align-items: flex-start;    /* Anchors everything to the top line */
+  gap: 12px;                  /* Clean structural gaps between cards and colons */
+  margin-bottom: 28px;        /* Pushes down cleanly against the 50% off text */
+}
+
+/* Vertical stacking for Card + Label text underneath */
+.flashDeal-timer-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;                   /* Gap between white box and the label text */
+}
+
+/* The Premium White Number Card */
+.flashDeal-timer-card {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  
+  /* Creates perfectly proportional boxes from the Figma file */
+  width: 52px;
+  height: 48px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;         /* Subtle premium curved edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* The Floating Colon Splitter ( : ) */
+.flashDeal-timer-divider {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 48px;          /* Match card height to vertical-center the colon */
+}
+
+/* The Mini Label Text under the cards */
+.flashDeal-timer-label {
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  opacity: 0.9;               /* Keeps it clean and readable but not overly bright */
+}
+
+/* ==========================================
+   MOBILE SCALING ADJUSTMENT
+   ========================================== */
+
+/* ==========================================
+   ⚡️ THE RESPONSIVE MOBILE FIX ⚡️
+   ========================================== */
+@media (max-width: 900px) {
+    .flashDeal-section-card {
+        /* Collapse down to 1 universal centered column so text shifts overlay 
+       safely over the middle on mobile screens without breaking clipping boundaries */
+        grid-template-columns: 1fr;
+        min-height: 500px;
+        padding-top: 60px;
+    }
+
+    .fleshDealTitle-img {
+        max-width: 85%;
+        /* Dynamically scales down scale ratios gracefully */
+    }
+
+     .flashDeal-timer-container {
+    gap: 8px;                 /* Squeezes closer together on ultra-narrow phones */
+  }
+  .flashDeal-timer-card {
+    width: 46px;
+    height: 42px;
+    font-size: 20px;          /* Shrinks slightly so it doesn't wrap lines */
+  }
+}

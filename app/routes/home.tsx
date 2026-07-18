@@ -5,6 +5,7 @@ import HeroSection from "~/page/home/heroSection/hero-section";
 import Footer from "~/footer/footer";
 import BottomBar from "~/bottomBar/bottom-bar";
 import Category from "~/page/home/categorySection/category-section";
+import FlashDeal from "~/page/home/flashDealSection/fleshdeal-section";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -21,7 +22,8 @@ export default function Home() {
       <BottomBar/>
       <main className="main-section">
         <HeroSection />
-        <Category/>
+        <Category />
+        <FlashDeal/>
       </main>
       <Footer/>
       
