@@ -2,108 +2,109 @@
    THE MAIN BANNER CONTAINER
    ========================================== */
 
-   .flashDeal-section{
-   display: flex;
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
-   }
+.flashDeal-section {
+  display: flex;
+  padding: 48px 0px 0px;
+  flex-direction: column;
+  align-items: center;
+}
+
 .flashDeal-section-card {
-    position: relative;
-    width: 100%;
-    height: 595px;
-    /* Carves out the structural height context */
-    overflow: hidden;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 50%;
-    align-content: center;
-    /* Vertically centers the text stack block */
-    justify-items: center;
-    /* Dead-centers every individual item inside its column cell */
+  position: relative;
+  width: 100%;
+  height: 595px;
+  /* Carves out the structural height context */
+  overflow: hidden;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 50%;
+  align-content: center;
+  /* Vertically centers the text stack block */
+  justify-items: center;
+  /* Dead-centers every individual item inside its column cell */
 }
 
 /* --- 1. The Backing Wallpaper Graphic --- */
 .fleshDeal-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
-    object-fit: cover;
-    z-index: 1;
+  object-fit: cover;
+  z-index: 1;
 }
 
 
 .flashDeal-section-card::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(270deg, rgba(90, 12, 61, 0) 0%, #5A0C3D 100%);
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(90, 12, 61, 0) 0%, #5A0C3D 100%);
 
 
-    z-index: 2;
-    pointer-events: none;
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* --- 2. The Complex Title SVG --- */
 .fleshDealTitle-img {
-    grid-column: 1;
-    /* Anchors inside the left layout zone */
-    z-index: 3;
-    /* Elevates over the background graphic */
-    width: 100%;
-    max-width: 520px;
-    /* Prevents the title vector from stretching too big */
-    height: auto;
-    margin-bottom: 20px;
-    /* Spacing pushing down against your crazy timer */
+  grid-column: 1;
+  /* Anchors inside the left layout zone */
+  z-index: 3;
+  /* Elevates over the background graphic */
+  width: 100%;
+  max-width: 520px;
+  /* Prevents the title vector from stretching too big */
+  height: auto;
+  margin-bottom: 20px;
+  /* Spacing pushing down against your crazy timer */
 }
 
 /* --- 3. 🚨 YOUR CRAZY TIMER TARGET PLACEHOLDER 🚨 --- */
 /* Whatever layout class name you attach to your dynamic countdown row container, 
    just give it these two tracking rules to join the structural grid flow perfectly: */
 .flashDeal-timer-container-placeholder {
-    grid-column: 1;
-    z-index: 3;
-    margin-bottom: 24px;
+  grid-column: 1;
+  z-index: 3;
+  margin-bottom: 24px;
 }
 
 /* --- 4. The Percentage Callout Text --- */
 .flashDeal-off-per {
-    grid-column: 1;
-    z-index: 3;
-    font-size: 22px;
-    font-weight: 400;
-    color: #FFFFFF;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0 0 12px 0;
+  grid-column: 1;
+  z-index: 3;
+  font-size: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 12px 0;
 }
 
 /* The neon highlight accent style */
 .flashDeal-per-num {
-    color: #E6F833;
-    /* Striking yellow/lime visual match */
-    font-weight: 700;
+  color: #E6F833;
+  /* Striking yellow/lime visual match */
+  font-weight: 700;
 }
 
 /* --- 5. The Campaign Subtext Message --- */
 .flashDeal-mess {
-    grid-column: 1;
-    z-index: 3;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-    text-align: center;
-    max-width: 320px;
-    /* Replicates the exact width constraint in Figma */
-    margin: 0;
+  grid-column: 1;
+  z-index: 3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 320px;
+  /* Replicates the exact width constraint in Figma */
+  margin: 0;
 }
 
 
@@ -113,12 +114,17 @@
 
 /* The main horizontal row container */
 .flashDeal-timer-container {
-  grid-column: 1;             /* Locks the timer to the left column zone */
-  z-index: 3;                 /* Floats safely above the background graphic */
+  grid-column: 1;
+  /* Locks the timer to the left column zone */
+  z-index: 3;
+  /* Floats safely above the background graphic */
   display: flex;
-  align-items: flex-start;    /* Anchors everything to the top line */
-  gap: 12px;                  /* Clean structural gaps between cards and colons */
-  margin-bottom: 28px;        /* Pushes down cleanly against the 50% off text */
+  align-items: flex-start;
+  /* Anchors everything to the top line */
+  gap: 12px;
+  /* Clean structural gaps between cards and colons */
+  margin-bottom: 28px;
+  /* Pushes down cleanly against the 50% off text */
 }
 
 /* Vertical stacking for Card + Label text underneath */
@@ -126,7 +132,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;                   /* Gap between white box and the label text */
+  gap: 6px;
+  /* Gap between white box and the label text */
 }
 
 /* The Premium White Number Card */
@@ -135,15 +142,16 @@
   color: #000000;
   font-size: 24px;
   font-weight: 700;
-  
+
   /* Creates perfectly proportional boxes from the Figma file */
   width: 52px;
   height: 48px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;         /* Subtle premium curved edges */
+  border-radius: 4px;
+  /* Subtle premium curved edges */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -152,7 +160,8 @@
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 700;
-  line-height: 48px;          /* Match card height to vertical-center the colon */
+  line-height: 48px;
+  /* Match card height to vertical-center the colon */
 }
 
 /* The Mini Label Text under the cards */
@@ -162,36 +171,223 @@
   font-weight: 400;
   text-transform: capitalize;
   letter-spacing: 0.5px;
-  opacity: 0.9;               /* Keeps it clean and readable but not overly bright */
+  opacity: 0.9;
+  /* Keeps it clean and readable but not overly bright */
 }
 
 /* ==========================================
-   MOBILE SCALING ADJUSTMENT
+   PRODUCT CARDS SYSTEM GRID WRAPPER
    ========================================== */
+.flashDeal-section-item {
+  display: grid;
+  /* Automatically maps to a uniform 4-column column track layout */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 48px 34px 0px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
 
 /* ==========================================
-   ⚡️ THE RESPONSIVE MOBILE FIX ⚡️
+   THE PRODUCT CARD CONTAINER
    ========================================== */
-@media (max-width: 900px) {
-    .flashDeal-section-card {
-        /* Collapse down to 1 universal centered column so text shifts overlay 
-       safely over the middle on mobile screens without breaking clipping boundaries */
-        grid-template-columns: 1fr;
-        min-height: 500px;
-        padding-top: 60px;
-    }
+.flashDeal-item-continer {
+  display: block;
+  /* Allows pricing elements below to sit side-by-side */
+  width: 100%;
+  cursor: pointer;
+}
 
-    .fleshDealTitle-img {
-        max-width: 85%;
-        /* Dynamically scales down scale ratios gracefully */
-    }
+/* --- Premium Interactive Hover Effects --- */
+.flashDeal-item-continer:hover .flashDeal-item-img {
+  transform: scale(1.04);
+}
 
-     .flashDeal-timer-container {
-    gap: 8px;                 /* Squeezes closer together on ultra-narrow phones */
+.flashDeal-item-continer:hover .flashDeal-item-select-option {
+  background-color: #000000;
+}
+
+.flashDeal-item-continer:hover .flashDeal-item-select-option-txt {
+  color: #ffffff;
+}
+
+/* ==========================================
+   THE IMAGE MEDIA WRAPPER & OVERLAYS
+   ========================================== */
+.flashDeal-item-img-continer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 5;
+  /* Matches premium e-commerce card tall aspect ratios */
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background-color: #f5f5f5;
+}
+
+.flashDeal-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- 1. Top-Left Red Discount Badge --- */
+.flashDeal-item-offer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #E30613;
+  /* Premium brand red color fill */
+  padding: 4px 6px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.flashDeal-item-offer-num {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Automatically adds the minus sign before the positive integer */
+.flashDeal-item-offer-num::before {
+  content: '-';
+}
+
+/* --- 2. Top-Right Floating Circular Cart Icon --- */
+.flashDeal-item-cart-background {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  transition: background-color 0.2s ease;
+
+   cursor: pointer;
+ 
+  background-size: 16px;
+}
+
+.flashDeal-item-cart-background:hover {
+  background-color: #f0f0f0;
+}
+
+/* --- 3. Bottom Floating Action Pill Bar --- */
+.flashDeal-item-select-option {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background-color: #ffffff;
+  padding: 8px 0;
+  border-radius: 6px;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease;
+}
+
+.flashDeal-item-select-option-txt {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+/* ==========================================
+   TYPOGRAPHY DETAILS (BELOW MEDIA CARD)
+   ========================================== */
+
+.flashDeal-item-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 6px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;       /* 👈 This is literally your maxLines property! */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Premium bold discount pricing style */
+.flashDeal-item-discount-price {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 8px 0 0;
+}
+
+/* Strikethrough grey original pricing style */
+.flashDeal-item-price {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #888888;
+  text-decoration: line-through;
+  margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE LAYOUT GRIDS
+   ========================================== */
+@media (max-width: 1024px) {
+  .flashDeal-section-item {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns across tablets */
+    gap: 16px;
   }
+}
+
+@media (max-width: 550px) {
+  .flashDeal-section-item {
+    grid-template-columns: 1fr;
+    /* 1 stacked column on phones */
+    padding: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .flashDeal-section-card {
+    /* Collapse down to 1 universal centered column so text shifts overlay 
+       safely over the middle on mobile screens without breaking clipping boundaries */
+    grid-template-columns: 1fr;
+    min-height: 500px;
+    padding-top: 60px;
+  }
+
+  .fleshDealTitle-img {
+    max-width: 85%;
+    /* Dynamically scales down scale ratios gracefully */
+  }
+
+  .flashDeal-timer-container {
+    gap: 8px;
+    /* Squeezes closer together on ultra-narrow phones */
+  }
+
   .flashDeal-timer-card {
     width: 46px;
     height: 42px;
-    font-size: 20px;          /* Shrinks slightly so it doesn't wrap lines */
+    font-size: 20px;
+    /* Shrinks slightly so it doesn't wrap lines */
   }
 }

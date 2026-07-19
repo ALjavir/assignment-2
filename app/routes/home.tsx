@@ -6,6 +6,7 @@ import Footer from "~/footer/footer";
 import BottomBar from "~/bottomBar/bottom-bar";
 import Category from "~/page/home/categorySection/category-section";
 import FlashDeal from "~/page/home/flashDealSection/fleshdeal-section";
+import "./home-style.css"
 
 export function meta({ }: Route.MetaArgs) {
   return [
