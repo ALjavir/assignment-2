@@ -1,0 +1,137 @@
+/* ==========================================
+   THE TWO-COLUMN BANNER CONTAINER SYSTEM
+   ========================================== */
+.home-2column-section {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr); 
+             
+  width: 100%;
+    padding: 48px 0px 0px;
+  box-sizing: border-box;
+
+}
+
+/* ==========================================
+   THE BANNER CARD LAYER STACK
+   ========================================== */
+.home-2column-section-card {
+  position: relative;          /* Anchors the absolute backing layers and image elements */
+  width: 100%;
+  aspect-ratio: 1 / 1;         /* Forces perfect premium square card boundaries */
+       /* Minimal classic corner smoothing matching the design */
+  overflow: hidden;            /* Ensures the image zoom and shadow clips inside the frame */
+  
+  /* ⚡️ DYNAMIC INNER STACKING ENGINE ⚡️ */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;   /* Pushes all the overlay content to the absolute bottom */
+  align-items: flex-start;     /* Left-aligns everything inside the container */
+  padding: 48px;               /* Clean breathing space on the edges of the text block */
+  box-sizing: border-box;
+  
+}
+
+/* --- Interactive Micro-Zoom Physics --- */
+.home-2column-section-card:hover .home-2column-section-card-image {
+  transform: scale(1.03);      /* High-end smooth cinematic zoom expansion scale */
+}
+
+/* --- 1. The Full-Coverage Background Image --- */
+.home-2column-section-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;                  /* Safe baseline layer */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- 2. ⚡️ THE MAGIC GRADIENT SHADE OVERLAY ⚡️ --- */
+.home-2column-section-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 55%;                 /* Smoothly climbs up through 55% of the card height */
+  /* Deep black fade to completely transparent, guaranteeing pristine white text contrast */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;                  /* Sandwich layer: floats on image, sits under text elements */
+  pointer-events: none;        /* Ensures clicking/hovering drops directly to the card container */
+}
+
+/* ==========================================
+   TYPOGRAPHY & BUTTON STYLING (FLOATED CONTENT)
+   ========================================== */
+
+.home-2column-section-card-subTitle {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;   /* Forces structural capitalization tracking */
+  letter-spacing: 1px;
+  margin: 0 0 12px 0;
+  z-index: 3;                  /* Elevated foreground placement */
+  position: relative;
+}
+
+.home-2column-section-card-title {
+  font-size: 44px;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.25;
+         /* Forces ideal multi-line layout wrapping exactly like Figma */
+  margin: 0 0 24px 0;
+  z-index: 3;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Pill Shape Button Action Wrapper */
+.home-2column-section-card-btn {
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 50px;         /* Infinite radius creates the perfect oval pill shape */
+  padding: 10px 26px;
+  z-index: 3;
+  position: relative;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.home-2column-section-card-btn-txt {
+  font-size: 18px;
+  font-weight: 500;
+  color: #5A0C3D;
+          /* Sharp layout dark accent color text swap */
+  margin: 0;
+}
+
+/* Subtle Interactive Button Feedback States */
+.home-2column-section-card-btn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-1px); /* Premium micro-lift float feedback trick */
+}
+
+/* ==========================================
+   ⚡️ THE RESPONSIVE RESPONSIVENESS FIX ⚡️
+   ========================================== */
+@media (max-width: 900px) {
+  .home-2column-section {
+    /* Collapses smoothly into a clean stacked column flow on smaller viewport tablet sizes */
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .home-2column-section-card {
+    padding: 32px;             /* Scales down padding sizes safely for modern mobile widths */
+    aspect-ratio: 4 / 3.5;     /* Slightly shorter rectangular compression variant on mobile viewports */
+  }
+
+  .home-2column-section-card-title {
+    font-size: 26px;           /* Reduces titles gracefully so words don't break lines awkwardly */
+  }
+}

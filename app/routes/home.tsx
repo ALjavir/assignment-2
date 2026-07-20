@@ -7,6 +7,7 @@ import BottomBar from "~/bottomBar/bottom-bar";
 import Category from "~/page/home/categorySection/category-section";
 import FlashDeal from "~/page/home/flashDealSection/fleshdeal-section";
 import "./home-style.css"
+import Home2column from "~/page/home/home-2columnSection/home-2column-section";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -24,7 +25,8 @@ export default function Home() {
       <main className="main-section">
         <HeroSection />
         <Category />
-        <FlashDeal/>
+        <FlashDeal />
+        <Home2column/>
       </main>
       <Footer/>
       
