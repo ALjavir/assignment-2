@@ -32,7 +32,6 @@ export default function Category() {
             <div className="category-header">
                 <p className="category-header-subTitle"> {subTitle}</p>
                 <h1 className="category-header-title" > {title}</h1>
-
             </div>
             <div className="category-card">
                 {CatData.map((CatData, index) => (

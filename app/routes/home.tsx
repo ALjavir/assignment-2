@@ -8,6 +8,7 @@ import Category from "~/page/home/categorySection/category-section";
 import FlashDeal from "~/page/home/flashDealSection/fleshdeal-section";
 import "./home-style.css"
 import Home2column from "~/page/home/home-2columnSection/home-2column-section";
+import NewArive from "~/page/home/newAriveSection/new-arive-section";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -26,7 +27,8 @@ export default function Home() {
         <HeroSection />
         <Category />
         <FlashDeal />
-        <Home2column/>
+        <Home2column />
+        <NewArive/>
       </main>
       <Footer/>
       
