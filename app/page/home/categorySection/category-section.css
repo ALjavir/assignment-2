@@ -153,7 +153,5 @@
   .category-card {
     grid-template-columns: 1fr; /* Stacked vertical view on small devices */
   }
-  #category-section {
-    padding: 40px 16px;
-  }
+
 }

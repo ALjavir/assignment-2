@@ -1,0 +1,86 @@
+#FeaturedSection {
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 34px 0px;
+    box-sizing: border-box;
+}
+
+.FeaturedSection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   FEATURED CARD & FLOATING CART BUTTON
+   ========================================== */
+
+/* Main Card Container */
+.FeaturedSection-card {
+  position: relative;             /* ⚡️ Required: anchors the absolute button inside */
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;               /* Keeps corners clean */
+  display: block;
+}
+
+/* Card Background Image */
+.FeaturedSection-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ⚡️ FLOATING CIRCULAR CART BUTTON ⚡️ */
+.FeaturedSection-item-cart-background {
+  position: absolute;
+  bottom: 20px;                   /* Offset from bottom edge */
+  right: 20px;                    /* Offset from right edge */
+  
+  width: 52px;                    /* Circle size */
+  height: 52px;
+  border-radius: 50%;             /* Makes it a perfect circle */
+  
+  background-color: #ffffff;
+  border: none;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft drop shadow matching the photo */
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover feedback */
+.FeaturedSection-item-cart-background:hover {
+  transform: scale(1.06);
+  background-color: #f9f9f9;
+}
+
+/* Overrides the inline 40px HTML attributes so the icon stays centered & proportional */
+.FeaturedSection-item-cart-background img {
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .FeaturedSection-grid
+ {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+@media (max-width: 550px) {
+    .FeaturedSection-grid
+ {
+        grid-template-columns: 1fr;
+    }
+}

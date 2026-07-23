@@ -9,6 +9,8 @@ import FlashDeal from "~/page/home/flashDealSection/fleshdeal-section";
 import "./home-style.css"
 import Home2column from "~/page/home/home-2columnSection/home-2column-section";
 import NewArive from "~/page/home/newAriveSection/new-arive-section";
+import CallOutSection from "~/page/home/calloutSection/callout-section";
+import FeaturedSection from "~/page/home/featuredSection/featured-section";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -28,7 +30,9 @@ export default function Home() {
         <Category />
         <FlashDeal />
         <Home2column />
-        <NewArive/>
+        <NewArive />
+        <CallOutSection />
+        <FeaturedSection/>
       </main>
       <Footer/>
       

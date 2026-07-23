@@ -1,11 +1,12 @@
 .bottomBar-container {
+  top: 0;
+  background-color: #ffffff;
   display: flex;
- 
-
   align-items: center;
   gap: 16px;
+  position: sticky;
+  z-index: 999;
   width: 100%;
- 
   margin: 0 auto;
   padding: 12px 64px;
 }
@@ -135,4 +136,38 @@
 
 .search-btn {
   padding-right: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+  .bottomBar-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 10px 16px 10px;
+
+  }
+
+  .category-dropdown-wrapper {
+    min-width: 170px;
+    padding: 16px 10px 16px 10px;
+  }
+}
+
+@media (max-width: 580px) {
+  .bottomBar-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category-dropdown-wrapper {
+    min-width: 170px;
+    
+  }
+
+  .sec-1 {
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
 }

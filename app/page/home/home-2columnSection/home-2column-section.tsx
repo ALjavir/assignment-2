@@ -23,7 +23,7 @@ export default function Home2column() {
                     <p className="home-2column-section-card-subTitle">{home2columnData.subTitle}</p>
                     <h1 className="home-2column-section-card-title">{home2columnData.tile}</h1>
                     <button className="home-2column-section-card-btn">
-                        <p className="home-2column-section-card-btn-txt">Discover More</p>
+                        Discover More
                     </button>
                 </div>
             ))}

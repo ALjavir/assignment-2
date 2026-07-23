@@ -62,9 +62,13 @@ export default function NewArive() {
     const title = "New Arrivals"
     const subTitle = "The latest styles you'll love."
     return (
-        <section className="newArive-section">
-            <p className="home-newArive-header-subTitle">{subTitle}</p>
-            <h1 className="home-newArive-header-title">{title}</h1>
+        <section id="newArive-section">
+              <div className="category-header">
+                <p className="category-header-subTitle"> {title}</p>
+                <h1 className="category-header-title" > {subTitle}</h1>
+            </div>
+            
+            <div className="home-newArive-section-all-card">
             {newArivedata.map((item, index) => (
                 <button key={index} className="home-newArive-section-card">
                     <img
@@ -87,9 +91,9 @@ export default function NewArive() {
                         </button>
                     </div>
                 </button>
+                
             ))}
-
-            {/* --- Bottom View All Action Button --- */}
+                </div>
             <div className="newArive-view-all-container">
                 <button className="newArive-view-all-btn">
                     View All New Products

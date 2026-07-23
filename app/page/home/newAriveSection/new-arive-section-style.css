@@ -1,42 +1,27 @@
 /* ==========================================
    NEW ARRIVALS SECTION GRID SYSTEM
    ========================================== */
-.newArive-section {
-  display: grid;
-  /* 4-Column responsive desktop grid layout */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+#newArive-section {
   width: 100%;
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 48px 34px 0px;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* --- Section Headers (Spans Full Width) --- */
-.home-newArive-header-subTitle {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 500;
-  color: #222222;
-  margin: 0 0 6px 0;
-}
-
-.home-newArive-header-title {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin: 0 0 36px 0;
-}
 
 /* ==========================================
    PRODUCT CARD & IMAGE CONTAINER
    ========================================== */
+.home-newArive-section-all-card{
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin: 0 auto;
+   
+    box-sizing: border-box;
+}
+
 .home-newArive-section-card {
   position: relative;
   background: none;
@@ -94,7 +79,7 @@
 
 /* Single-Line Truncated Title */
 .home-newArive-section-card-title {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   color: #000000;
   margin: 0 0 3px 0;
@@ -106,7 +91,7 @@
 
 /* Grey Subdued Price */
 .home-newArive-section-card-price {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   color: #666666;
   margin: 0;
@@ -128,9 +113,9 @@
 }
 
 .home-newArive-section-card:hover .flashDeal-item-cart-background {
-  background-color: #000000;
-  border-color: #000000;
-  color: #ffffff;
+
+  border-color: #00000069;
+
 }
 
 /* ==========================================
@@ -144,10 +129,11 @@
 }
 
 .newArive-view-all-btn {
-  background-color: #4A0E2E; /* Exact deep burgundy color matching design reference */
+  background-color: #4A0E2E;
+  /* Exact deep burgundy color matching design reference */
   color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   padding: 12px 32px;
   border: none;
   border-radius: 6px;
@@ -164,16 +150,16 @@
    RESPONSIVE BREAKPOINTS
    ========================================== */
 @media (max-width: 1024px) {
-  .newArive-section {
+  .home-newArive-section-all-card {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 }
 
 @media (max-width: 550px) {
-  .newArive-section {
+  .home-newArive-section-all-card {
     grid-template-columns: 1fr;
-    padding: 40px 16px;
+  
   }
 
   .home-newArive-header-title {
